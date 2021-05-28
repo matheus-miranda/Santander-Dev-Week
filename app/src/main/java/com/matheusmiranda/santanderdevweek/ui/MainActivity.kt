@@ -2,7 +2,6 @@ package com.matheusmiranda.santanderdevweek.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun buscarContaCliente() {
-        mainViewModel.buscarContaCliente().observe(this, Observer { result ->
+        mainViewModel.buscarContaCliente().observe(this, { result ->
             onBindView(result)
         })
     }
